@@ -9,6 +9,11 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Hello World</h1>
+    <h1>My To-dos</h1>
+    <ul>
+    {% for t in all_todos %}
+    <li {% if t.done %} style="text-decoration: line-through" {% endif %}>{{t.name}}</li>
+    {% endfor %}
+    </ul>
 </body>
 </html>
